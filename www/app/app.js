@@ -1,0 +1,1 @@
+angular.module('CamaraTermicaApp', ['ngRoute', 'ngResource']);

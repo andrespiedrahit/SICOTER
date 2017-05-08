@@ -1,0 +1,94 @@
+body{
+    background-image: url("../img/fondoLogin2.jpg");
+    background-size: 100% 100%;
+    height: 950px;
+    background-repeat: no-repeat;
+}
+.titulo{
+    margin-top: 90px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+.divPanel{
+    width: 390px;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+.divPanelRegistro{
+    width: 390px;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    margin-bottom: 3px;
+}
+.imgSena{
+    width: 110px;
+    height: 110px;
+}
+#usuario{
+    font-weight: bold;
+    color: #000;
+}
+#password{
+    font-weight: bold;
+    color: #000;
+}
+#nombre{
+    font-weight: bold;
+    color: #000;
+}
+#apellido{
+    font-weight: bold;
+    color: #000;
+}
+#correo{
+    font-weight: bold;
+    color: #000;
+}
+.divFooter{
+    margin-top: 190px;
+    height: 80px;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    background: white;
+}
+.imgFooter1{
+    width: 80px;
+    height: 80px;
+}
+.imgFooter2{
+    width: 180px;
+    height: 80px;
+}
+.imgFooter3{
+    width: 200px;
+    height: 70px;
+}
+.imgFooter4{
+    width: 200px;
+    height: 70px;
+}
+.divFooterRegistro{
+    height: 80px;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    background: white;
+}
+
+
+
+.contenedorPaneles{
+    padding: 10px;
+}
+.logoADSIModal{
+    width: 250px;
+    height: 100px;
+}
+
+.fotoModal{
+    width: 120px;
+    height: 130px;
+}
+.textModal{
+    font-family: Agency FB;
+    font-size: 20px;
+}

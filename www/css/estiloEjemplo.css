@@ -1,0 +1,33 @@
+.tituloBarraNav{
+    color: white;
+}
+.titulo{
+    margin-top: 90px;
+    text-align: center;
+}
+.panel-1 {
+    border-color: #fc7323;
+}
+.panel-1 > .panel-heading {
+    color: #333;
+    background-color: rgba(252,115,35,0.8);
+    border-color: rgba(252,115,35,0.8);
+    text-align: center;
+}
+/*Carrusel*/
+.divCarrusel{
+    margin-bottom: 30px;
+}
+
+.imgCarrusel{
+    width: 100%;
+    height: 400px;
+}
+.imgCarruselXs{
+    width: 100%;
+    height: 600px;
+}
+.textCarrusel{
+    font-size: 18px;
+}
+

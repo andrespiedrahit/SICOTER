@@ -1,0 +1,174 @@
+<link rel="stylesheet" href="css/estilologin.css">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1 class="tituloBarraNav">SICOTER</h1>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="dropdown">
+                    <a href="#!/index" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inicio</a>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4">
+            <h1 class="titulo">Control de Camara Termica</h1>
+        </div>
+    </div>
+
+    <center>
+        <div class="panel divPanel">
+            <div class="panel-heading">
+                <img class="img-circle img-responsive imgSena" src="img/simboloSENA.png">
+            </div>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group-lg">
+                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario">
+                    </div>
+                    <br>
+                    <div class="form-group-lg">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
+                    </div>
+                    <br>
+                    <a href="#!/modulo"><button type="submit" class="btn btn-block btn-lg btn-success">Iniciar Session</button></a>
+                    <br>
+                    <a href="#!/registrate">Registrate</a>
+                </form>
+            </div>
+        </div>
+    </center>
+</div>
+
+<div class="row divFooter">
+    <center>
+        <div class="col-lg-2 col-lg-offset-2 col-md-3 col-sm-3 col-xs-6">
+            <img class="imgFooter1 img-responsive" src="img/logoSena.png">
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-6">
+            <img class="imgFooter2 img-responsive" src="img/sennova.png">
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-6" style="padding-left: 0px; padding-right: 0px; background: white;">
+            <img class="imgFooter3 img-responsive" src="img/Tecnoparque.png">
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-6" style="background: white">
+            <img class="imgFooter4 img-responsive" src="img/LogoADSI.png" data-toggle="modal" data-target=".bs-example-modal-lg">
+        </div>
+    </center>
+</div>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content contenedorPaneles">
+            <div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <center><img class="logoADSIModal" src="img/LogoADSI.png"></center>
+                <h2>Equipo Desarrollador</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="panel panel-default" style="padding-left: 10px;">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <img class="img-circle fotoModal" src="img/imgFotos/">
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                <i class="glyphicon glyphicon-user"><p class="textModal">BRAYAN A. PIEDRAHITA</p></i><br>
+                                <i class="glyphicon glyphicon-envelope"><p class="textModal">cristhiansoft@gmail.com</p></i><br>
+                                <i class="glyphicon glyphicon-phone"><p class="textModal">(+57)311 365 0724</p></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
+                    <div class="panel panel-default" style="padding-left: 10px;">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <img class="img-circle fotoModal" src="img/imgFotos/">
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <i class="glyphicon glyphicon-user"><p class="textModal">CRISTHIAN C. VELASQUEZ GALARCIO</p></i><br>
+                                <i class="glyphicon glyphicon-envelope"><p class="textModal">cristhiansoft@gmail.com</p></i><br>
+                                <i class="glyphicon glyphicon-phone"><p class="textModal">(+57)311 365 0724</p></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="row">
+                            <div class="col-sm-8 col-xs-8" style="padding-left: 30px">
+                                <i class="glyphicon glyphicon-user"><p class="textModal">CRISTHIAN C. VELASQUEZ GALARCIO</p></i><br>
+                                <i class="glyphicon glyphicon-envelope"><p class="textModal">cristhiansoft@gmail.com</p></i><br>
+                                <i class="glyphicon glyphicon-phone"><p class="textModal">(+57)311 365 0724</p></i>
+                            </div>
+                            <div class="col-sm-4 col-xs-4" style="padding-left: 0px">
+                                <img class="img-circle fotoModal" src="img/imgFotos/">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+                    <div class="panel panel-default" style="padding-left: 10px;">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <img class="img-circle fotoModal" src="img/imgFotos/">
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                <i class="glyphicon glyphicon-user"><p class="textModal">VICTORIA LOPEZ BAUTISTA</p></i><br>
+                                <i class="glyphicon glyphicon-envelope"><p class="textModal">lopezbautistav@yahoo.com</p></i><br>
+                                <i class="glyphicon glyphicon-phone"><p class="textModal">(+57)323 446 1273</p></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
+                    <div class="panel panel-default" style="padding-left: 10px;">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <img class="img-circle fotoModal" src="img/imgFotos/">
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <i class="glyphicon glyphicon-user"><p class="textModal">JOMARA VANNESA CASTAÑEDA</p></i><br>
+                                <i class="glyphicon glyphicon-envelope"><p class="textModal">vannesamejia25@gmail.com</p></i><br>
+                                <i class="glyphicon glyphicon-phone"><p class="textModal">(+57)312 725 1323</p></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="row">
+                            <div class="col-sm-8 col-xs-8" style="padding-left: 30px">
+                                <i class="glyphicon glyphicon-user"><p class="textModal">JOMARA VANNESA CASTAÑEDA</p></i><br>
+                                <i class="glyphicon glyphicon-envelope"><p class="textModal">cristhiansoft@gmail.com</p></i><br>
+                                <i class="glyphicon glyphicon-phone"><p class="textModal">(+57)311 365 0724</p></i>
+                            </div>
+                            <div class="col-sm-4 col-xs-4" style="padding-left: 0px">
+                                <img class="img-circle fotoModal" src="img/imgFotos/">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

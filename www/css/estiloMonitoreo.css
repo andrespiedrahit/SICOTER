@@ -1,0 +1,17 @@
+.divTabla{
+    margin-top: 30px;
+}
+.tituloTabla{
+    text-align: center;
+    font-weight: bold;
+    border: solid 1px gray;
+    margin-bottom: 0px;
+    padding-top: 20px;
+}
+.textTabla{
+    text-align: center;
+    color: orange;
+}
+.iconoFlechaMonitoreo{
+    font-size: 20px;
+}

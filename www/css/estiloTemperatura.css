@@ -1,0 +1,33 @@
+.tituloAzulTemp{
+    margin-top: 90px;
+    color: #0066ff;
+}
+.tituloTemp{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contenedorDivs{
+    margin-bottom: 20px;
+}
+.divTitulo{
+    margin-top: 80px;
+}
+.textGrafi{
+    margin-top: 20px;
+}
+.imgGraf{
+    width: 50px;
+    height: 50px;
+}
+.principal{
+    border: solid 1px #238276;
+}
+.boton{
+    margin-top: 10px;
+}
+.buscar{
+    float: right;
+}
+.contenedorTabla{
+    margin-top: 30px;
+}
