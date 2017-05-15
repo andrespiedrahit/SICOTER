@@ -19,3 +19,31 @@
 .iconoFlecha{
     font-size: 30px;
 }
+.divs{
+    margin-top: 100px;
+    border-color: orange;
+    border: 2px solid;
+    height: 200px;
+}
+.divs1{
+    margin-top: 100px;
+    border-color: orange;
+    border: 2px solid;
+    height: 750px;
+    margin-left: 10px;
+}
+.divss{
+    border-color: orange;
+    border: 2px solid;
+}
+.divss2{
+    border-color: orange;
+    border: 2px solid;
+    margin-top: 20px;
+}
+.nuevousuario{
+    background: #000000;
+    border: 2px solid;
+    margin-bottom: 20px;
+}
+

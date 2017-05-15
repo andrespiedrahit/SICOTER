@@ -55,6 +55,14 @@ angular.module('CamaraTermicaApp').config(['$routeProvider',
                     controller: 'graficaConsultaGController',
                     templateUrl: 'app/template/graficaConsultaG.html'
                 }).
+                when('/inicioSistemaControl', {
+                    controller: 'inicioSistemaControlController',
+                    templateUrl: 'app/template/inicioSistemaControl.html'
+                }).
+                when('/sistemaControl', {
+                    controller: 'sistemaControlController',
+                    templateUrl: 'app/template/sistemaControl.html'
+                }).
                 otherwise('/');
     }
 ]);
