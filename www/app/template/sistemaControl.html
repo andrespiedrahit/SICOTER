@@ -36,8 +36,11 @@
         <br>
         <img  src="img/nuevousuario2.png" class="img-circle nuevousuario">Agregar Nuevo Usuario
         <br>
-        <div class=" alert alert-success">
+        <div class=" alert alert-success" ng-show="false">
             <center>Usuario Editado Exitoso</center>
+        </div>
+        <div class=" alert alert-success" ng-show="true">
+            <center>Registro Exitoso</center>
         </div>
         <table class="table table-bordered">
             <thead>
@@ -155,15 +158,12 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <div class="alert alert-danger" role="alert">
-                    <center>¿Desea Eliminarlo?</center>
-                </div>
+                <center> <h3>Desea Eliminar El Usuario:</h3> </center>
             </div>
             <center>
-                <div class="modal-footer center-block">
+                <div class="modal-footer center-block" style="text-align: center">
                     <button type="button" class="btn btn-primary">Aceptar</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Cancelar</button>
 
                 </div>
             </center>
