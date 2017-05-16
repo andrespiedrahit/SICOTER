@@ -34,7 +34,7 @@
     <div class="col-lg-8 divs1">
         <center><h1>Sistema de Usuarios</h1></center>
         <br>
-        <img  src="img/nuevousuario2.png" class="img-circle nuevousuario">Agregar Nuevo Usuario
+        <img  src="img/nuevousuario2.png" class="img-circle nuevousuario" data-toggle="modal" data-target="#myModal">Agregar Nuevo Usuario
         <br>
         <!-- Alerta de editado -->
         <div class=" alert alert-success" ng-show="true">
@@ -136,6 +136,54 @@
 </div>
 
 
+
+<!-- Modal nuevo usuario-->
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class=" modal-dialog modal-sm modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Nuevo Usuario</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+                    <div>
+                        <input type="text" class="form-control" id="aliasusuario" name="aliasusuario" placeholder="Alias del Usuario">
+                    </div>
+                    <br>
+                    <div >
+                        <div class="alert alert-danger" ng-show="false">la cedula esta repetida</div>
+                        <input type="number" class="form-control" id="cedula" name="cedula" placeholder="Cedula">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombres">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellidos">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="password" class="form-control" id="repetircontraseña" name="repetircontraseña" placeholder="Repetir Contraseña">
+                    </div>
+                    <br>
+                    <!-- Single button -->
+                    <SELECT class="form-control input-sm" aria-label="..."> 
+                        <OPTION>Administrador</OPTION>
+                        <OPTION> Invitado</OPTION> 
+                    </SELECT> 
+                    <br>
+                    <a href=""><button type="submit" class="btn btn-block btn-lg btn-success">Crear</button></a>
+                </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Modal editar -->
 <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
