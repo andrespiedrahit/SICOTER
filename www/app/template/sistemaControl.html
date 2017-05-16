@@ -36,11 +36,13 @@
         <br>
         <img  src="img/nuevousuario2.png" class="img-circle nuevousuario">Agregar Nuevo Usuario
         <br>
-        <div class=" alert alert-success" ng-show="false">
+        <!-- Alerta de editado -->
+        <div class=" alert alert-success" ng-show="true">
             <center>Usuario Editado Exitoso</center>
         </div>
-        <div class=" alert alert-success" ng-show="true">
-            <center>Registro Exitoso</center>
+        <!-- Modal editar -->
+        <div class=" alert alert-success" ng-show="false">
+            <center>Usuario Editado Exitoso</center>
         </div>
         <table class="table table-bordered">
             <thead>
@@ -136,20 +138,75 @@
 
 
 <!-- Modal editar -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                <h4 class="modal-title text-center" id="myModalLabel">Nuevo Usuario</h4>
             </div>
             <div class="modal-body">
-                Editar
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-id-card-o"></i>                            
+                        </span>
+                        <input type="text" class="form-control" aria-label="..." readonly placeholder="Cedula">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-at"></i>                            
+                        </span>
+                        <input type="text" class="form-control" aria-label="..."  placeholder="Alias">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i>                            
+                        </span>
+                        <input type="text" class="form-control" aria-label="..."  placeholder="Nombre">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i>                            
+                        </span>
+                        <input type="text" class="form-control" aria-label="..."  placeholder="Apellido">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-key"></i>                            
+                        </span>
+                        <input class="form-control" placeholder="Contraseña" type="password" value="" id="example-password-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-key"></i>                            
+                        </span>
+                        <input class="form-control" placeholder="Repetir Contraseña" type="password" value="" id="example-password-input">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"> <i class="fa fa-users"></i>
+                        </span>
+                        <select class="form-control input-sm" aria-label="...">
+                            <option>Admin</option>
+                            <option>Invitado</option>
+                        </select>
+                    </div>
+                </div>
+
+               
+
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+             <div class="modal-footer center-block" style="text-align: center">
+                    <button type="button" class="btn btn-primary">Aceptar</button>
+                        <button type="button" class="btn btn-primary">Cancelar</button>
+
+                </div>
         </div>
     </div>
 </div>
