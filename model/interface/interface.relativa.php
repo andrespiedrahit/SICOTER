@@ -1,6 +1,6 @@
 <?php
 
-interface  IVariables {
+interface IRelativas {
 
   public function select();
 

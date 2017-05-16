@@ -63,6 +63,7 @@ angular.module('CamaraTermicaApp').config(['$routeProvider',
                     controller: 'sistemaControlController',
                     templateUrl: 'app/template/sistemaControl.html'
                 }).
+               
                 otherwise('/');
     }
 ]);

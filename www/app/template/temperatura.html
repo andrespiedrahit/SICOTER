@@ -101,36 +101,32 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
             <table class="table table-striped">
-                <thead>
+                <thead >
                     <tr>
                         <td>
-                            Fecha
+                           Id
                         </td>
                         <td>
-                            Id_variable
+                            Valor de Temperatura
                         </td>
                         <td>
-                            nombre
+                            Fecha de Temperatura
                         </td>
-                        <td>
-                            valor
-                        </td>
+                        
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-repeat="data in dataTable">
-                        <td>
-                            {{data.fecha}}
+                         <td>
+                            {{data.id_temperatura}}
                         </td>
                         <td>
-                            {{data.id_variable}}
+                            {{data.valor_temperatura}}
                         </td>
                         <td>
-                            {{data.nombre}}
+                            {{data.fecha_temperatura}}
                         </td>
-                        <td>
-                            {{data.valor}}
-                        </td>
+                        
                     </tr>
                 </tbody>
             </table>

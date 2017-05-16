@@ -1,10 +1,10 @@
 <?php
 
-class muestreoTemperatura extends controllerExtended {
+class muestreoRelativa extends controllerExtended {
 
     public function main(\request $request) {
         try {
-            $this->loadTableVariables();
+            $this->loadTableRelativas();
             $variableDAO = new variableDAOExt($this->getConfig());
             $this->setParam('data', $variableDAO->select());
             $this->setView('json');
@@ -13,11 +13,11 @@ class muestreoTemperatura extends controllerExtended {
         }
     }
 
-    private function loadTableVariables() {
-        require $this->getConfig()->getPath() . 'model/table/table.variable.php';
-        require $this->getConfig()->getPath() . 'model/interface/interface.variable.php';
-        require $this->getConfig()->getPath() . 'model/DAO/class.variableDAO.php';
-        require $this->getConfig()->getPath() . 'model/extended/class.variableDAOExt.php';
+    private function loadTableRelativas() {
+        require $this->getConfig()->getPath() . 'model/table/table.relativa.php';
+        require $this->getConfig()->getPath() . 'model/interface/interface.relativa.php';
+        require $this->getConfig()->getPath() . 'model/DAO/class.relativaDAO.php';
+        require $this->getConfig()->getPath() . 'model/extended/class.relativaDAOExt.php';
     }
 
 }
