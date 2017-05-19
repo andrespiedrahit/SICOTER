@@ -5,7 +5,7 @@
   <DocFolder>C:\Users\ADSI\Documents</DocFolder>
   <Sch Cm="" nm="public">
     <Tbl UsSo="1" nm="Rol">
-      <TblOpts/>
+      <TblOpts>WITHOUT OIDS</TblOpts>
       <Pk ClNs="id_rol" nm="pkRol"/>
       <Cl au="0" df="" nm="id_rol" nu="0">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
@@ -17,7 +17,7 @@
       <SchTrHis/>
     </Tbl>
     <Tbl UsSo="1" nm="tblusuarios">
-      <TblOpts/>
+      <TblOpts>WITHOUT OIDS</TblOpts>
       <Pk ClNs="id_usuario" nm="pktblusuarios"/>
       <Cl au="0" df="" nm="id_usuario" nu="0">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
@@ -46,7 +46,7 @@
       <SchTrHis/>
     </Tbl>
     <Tbl UsSo="1" nm="tblvariables">
-      <TblOpts/>
+      <TblOpts>WITHOUT OIDS</TblOpts>
       <Pk ClNs="Id_variables" nm="pktblvariables"/>
       <Cl au="1" df="nextval('&quot;tblvariables_Id_variables_seq&quot;'::regclass)" nm="Id_variables" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
@@ -146,4 +146,5 @@
     <TreePath/>
     <TreePath>/Schemas (1)</TreePath>
   </TreePaths>
+  <SqlTexts/>
 </Db>

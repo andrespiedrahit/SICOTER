@@ -19,31 +19,127 @@
 .iconoFlecha{
     font-size: 30px;
 }
+/*---------------------------------------------------menu de inicio de sistema de control--------------------------------*/
 .divs{
     margin-top: 100px;
-    border-color: orange;
     border: 2px solid;
+    color: orange;
     height: 200px;
 }
+/*-------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------inicio de sistema de control--------------------------------*/
 .divs1{
     margin-top: 100px;
-    border-color: orange;
     border: 2px solid;
+    color: orange;
     height: 750px;
     margin-left: 10px;
 }
+/*-------------------------------------------------------------------------------------------------------------------------*/
 .divss{
     border-color: orange;
     border: 2px solid;
 }
 .divss2{
     border-color: orange;
-    border: 2px solid;
+    border: 1px solid;
     margin-top: 20px;
+}
+/*-------------------------------------------------nuevos usuarios--------------------------------------------------*/
+.nuevosusu{
+    color: black;
 }
 .nuevousuario{
     background: #000000;
     border: 2px solid;
     margin-bottom: 20px;
 }
+/*-----------------------------------------------titilos encender extractor y valvula--------------------------------------*/
+.titulovalext{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    
+}
+/*-------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------imagenes extrac-valvulas-------------------------------------------------------------*/
+.valvula{
+    margin-top: 50px;
+    display:block;
+    text-align: center;
+    border: 1px solid;
+    color: #006666;
+    background-color: orange;
+    height: 70%;
+    border-radius: 20px;
+}
+.valve{
+    margin-top: 100px;
+}
+
+/* ------------------------------------------------------------------switch------------------------------------------------*/
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.switchh{
+    margin-top: 30px;
+    display:block;
+    text-align: center;
+}
+/*------------------------------------------------------------------------------------------------------------------*/
 
