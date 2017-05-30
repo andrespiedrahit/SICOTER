@@ -1,1 +1,7 @@
-angular.module('CamaraTermicaApp', ['ngRoute', 'ngResource', 'ngStorage', 'ngRoute.middleware']);
+
+angular.module('CamaraTermicaApp', [
+    'ngRoute',
+    'ngResource',
+    'ngStorage',
+    'ngRoute.middleware'
+]);

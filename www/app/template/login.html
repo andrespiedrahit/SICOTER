@@ -31,30 +31,32 @@
             <h1 class="titulo">Control de Camara Termica</h1>
         </div>
     </div>
-
+    
     <center>
         <div class="panel divPanel">
             <div class="panel-heading">
                 <img class="img-circle img-responsive imgSena" src="img/simboloSENA.png">
             </div>
             <div class="panel-body">
-                <form>
+                <form ng-submit="submit()">
                     <div class="form-group-lg">
-                        <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario">
+                        <input ng-model="datos.usuario" type="text" class="form-control" id="usuario"  placeholder="Usuario" required>
                     </div>
                     <br>
                     <div class="form-group-lg">
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
+                        <input ng-model="datos.contrasena" type="password" class="form-control" id="password"  placeholder="Contraseña" required>
                     </div>
+                    <br>
+                    <div class="alert alert-danger" ng-show="usuarioErroneo">Usuario Invalido</div>
                     <br>
                     <a href="#!/modulo"><button type="submit" class="btn btn-block btn-lg btn-success">Iniciar Session</button></a>
                     <br>
-                    <a href="#!/registrate">Registrate</a>
                 </form>
             </div>
         </div>
     </center>
 </div>
+
 
 <div class="row divFooter">
     <center>

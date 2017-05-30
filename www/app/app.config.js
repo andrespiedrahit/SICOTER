@@ -2,21 +2,22 @@
 angular.module('CamaraTermicaApp').constant('rolAdmin', 1);
 angular.module('CamaraTermicaApp').constant('rolInvitado', 2);
 angular.module('CamaraTermicaApp').constant('urlServer', 'http://localhost/CamaraTermica/www/server.php/');
-/*middleware que comprueba laas session y los tipos de roles*/
+//
+///*middleware que comprueba laas session y los tipos de roles*/
 angular.module('CamaraTermicaApp').config(['$middlewareProvider',
     function middlewareProviderConfig($middlewareProvider) {
         $middlewareProvider.map({
             'comprobarSession': ['$localStorage', '$sessionStorage', function comprobarSession($localStorage, $sessionStorage) {
                     middlewareComprobarSession(this, $localStorage, $sessionStorage);
                 }],
-            'comprobarPermisoAdministracion': ['$localStorage', '$sessionStorage', 'rolAdmin', function comprobarPermisoAdministracion($localStorage, $sessionStorage, $rolAdmin) {
-                    middlewarecomprobarPermisoAdministracion(this, $localStorage, $sessionStorage);
+            'comprobarPermisoDeAdmnistracion': ['$localStorage', '$sessionStorage', 'rolAdmin', function comprobarPermisoDeAdmnistracion($localStorage, $sessionStorage, rolAdmin) {
+                    middlewareComprobarPermisoDeAdmnistracion(this, $localStorage, $sessionStorage, rolAdmin);
                 }],
-            'comprobarPermisoInvitado': ['$localStorage', '$sessionStorage', 'rolInvitado', function comprobarPermisoInvitado($localStorage, $sessionStorage, $rolInvitado) {
-                    middlewarecomprobarPermisoInvitado(this, $localStorage, $sessionStorage);
+            'comprobarPermisoInvitado': ['$localStorage', '$sessionStorage', 'rolInvitado', function comprobarPermisoInvitado($localStorage, $sessionStorage, rolInvitado) {
+                    middlewarecomprobarPermisoInvitado(this, $localStorage, $sessionStorage, rolInvitado);
                 }],
-            'comprobarNoTenerSession': ['$localStorage', '$sessionStorage', 'rolAdmin', function comprobarNoTenerSession($localStorage, $sessionStorage, $rolAdmin) {
-                    middlewarecomprobarNoTenerSession(this, $localStorage, $sessionStorage, $rolAdmin);
+            'comprobarNoTenerSesion': ['$localStorage', '$sessionStorage', 'rolAdmin', function comprobarPermisoInvitado($localStorage, $sessionStorage, rolAdmin) {
+                    middlewarecomprobarNoTenerSesion(this, $localStorage, $sessionStorage, rolAdmin);
                 }]
         });
     }]);
@@ -28,7 +29,18 @@ angular.module('CamaraTermicaApp').config(['$routeProvider', '$httpProvider', fu
         $routeProvider.
                 when('/login', {
                     controller: 'loginController',
-                    templateUrl: 'app/template/login.html'
+                    templateUrl: 'app/template/login.html',
+                    middleware: ['comprobarNoTenerSession']
+                }).
+                when('/', {
+                    controller: 'indexController',
+                    templateUrl: 'app/template/index.html',
+                    middleware: ['comprobarNoTenerSession']
+                }).
+                when('/logout', {
+                    controller: 'logoutController',
+                    template: '<p>Cerrando Session...</p>',
+                    middleware: ['comprobarSession']
                 }).
                 when('/', {
                     controller: 'indexController',

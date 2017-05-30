@@ -1,8 +1,9 @@
-function middlewareComprobarPermisoInvitado($this, $localStorage, $sessionStorage, rolInvitado) {
-  if ($sessionStorage.usuario.rol == rolInvitado) {
-    $this.next();
-  } else {
-    $this.redirectTo('/login');
-  }
+
+function middlewarecomprobarPermisoInvitado($this, $localStorage, $sessionStorage, rolInvitado) {
+    if ($sessionStorage.usuario.id_rol == rolInvitado) {
+        $this.next();
+    } else {
+        $this.redirectTo('/login');
+    }
 }
 
