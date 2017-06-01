@@ -30,101 +30,92 @@ angular.module('CamaraTermicaApp').config(['$routeProvider', '$httpProvider', fu
                 when('/login', {
                     controller: 'loginController',
                     templateUrl: 'app/template/login.html',
-                    middleware: ['comprobarNoTenerSession']
+//                    middleware: ['comprobarNoTenerSession']
                 }).
                 when('/', {
                     controller: 'indexController',
                     templateUrl: 'app/template/index.html',
-                    middleware: ['comprobarNoTenerSession']
+//                    middleware: ['comprobarNoTenerSession']
                 }).
                 when('/logout', {
                     controller: 'logoutController',
                     template: '<p>Cerrando Session...</p>',
-                    middleware: ['comprobarSession']
-                }).
-                when('/', {
-                    controller: 'indexController',
-                    templateUrl: 'app/template/index.html'
-                }).
-                when('/logout', {
-                    controller: 'logoutController',
-                    template: '<p>Cerrando Session...</p>',
-                    middleware: ['comprobarSession']
+//                    middleware: ['comprobarSession']
                 }).
                 when('/registrate', {
                     controller: 'registrateController',
                     templateUrl: 'app/template/registrate.html',
-                    middleware: ['comprobarNoTenerSession']
+//                    middleware: ['comprobarNoTenerSession']
                 }).
                 when('/modulo', {
                     controller: 'moduloController',
                     templateUrl: 'app/template/moduloInteractuar.html',
-                    middleware: ['comprobarSession']
+//                    middleware: ['comprobarSession']
                 }).
                 when('/temperatura', {
                     controller: 'temperaturaController',
                     templateUrl: 'app/template/temperatura.html',
-                    middleware: ['comprobarSession']
+//                    middleware: ['comprobarSession']
                 }).
                 when('/monitoreo', {
                     controller: 'monitoreoController',
                     templateUrl: 'app/template/monitoreo.html',
-                    middleware: ['comprobarSession']
+//                    middleware: ['comprobarSession']
                 }).
                 when('/graficaTemperatura', {
                     controller: 'graficaTemperaturaController',
                     templateUrl: 'app/template/graficaTemperatura.html',
-                    middleware: ['comprobarSession']
+//                    middleware: ['comprobarSession']
                 }).
                 when('/humedadR', {
                     controller: 'humedadRController',
                     templateUrl: 'app/template/humedadR.html',
-                    middleware: ['comprobarSession']
+//                    middleware: ['comprobarSession']
                 }).
                 when('/graficaHumedadR', {
                     controller: 'graficaHumedadRController',
                     templateUrl: 'app/template/graficaHumedadR.html',
-                    middleware: ['comprobarSession']
+//                    middleware: ['comprobarSession']
                 }).
                 when('/humedadS', {
                     controller: 'humedadSController',
                     templateUrl: 'app/template/humedadS.html',
-                    middleware: ['comprobarSession']
+//                    middleware: ['comprobarSession']
                 }).
                 when('/graficaHumedadS', {
                     controller: 'graficaHumedadSController',
                     templateUrl: 'app/template/graficaHumedadS.html',
-                    middleware: ['comprobarSession']
+//                    middleware: ['comprobarSession']
                 }).
                 when('/consultaG', {
                     controller: 'consultaGController',
                     templateUrl: 'app/template/consultaG.html',
-                    middleware: ['comprobarSession']
+//                    middleware: ['comprobarSession']
                 }).
                 when('/graficaConsultaG', {
                     controller: 'graficaConsultaGController',
                     templateUrl: 'app/template/graficaConsultaG.html',
-                    middleware: ['comprobarSession']
+//                    middleware: ['comprobarSession']
                 }).
                 when('/inicioSistemaControl', {
                     controller: 'inicioSistemaControlController',
                     templateUrl: 'app/template/inicioSistemaControl.html',
-                    middleware: ['comprobarSession', 'comprobarPermisoAdministracion']
+//                    middleware: ['comprobarSession', 'comprobarPermisoAdministracion']
                 }).
                 when('/sistemaControl', {
                     controller: 'sistemaControlController',
                     templateUrl: 'app/template/sistemaControl.html',
-                    middleware: ['comprobarSession', 'comprobarPermisoAdministracion']
+//                    middleware: ['comprobarSession', 'comprobarPermisoAdministracion']
                 }).
                 when('/valvula', {
                     controller: 'valvulaController',
                     templateUrl: 'app/template/valvula.html',
-                    middleware: ['comprobarSession', 'comprobarPermisoAdministracion']
+//                    middleware: ['comprobarSession', 'comprobarPermisoAdministracion']
                 }).
                 when('/extractores', {
                     controller: 'extractoresController',
                     templateUrl: 'app/template/extractores.html',
-                    middleware: ['comprobarSession', 'comprobarPermisoAdministracion']
+//                    middleware: ['comprobarSession', 'comprobarPermisoAdministracion']
                 }).
                 otherwise('/');
     }

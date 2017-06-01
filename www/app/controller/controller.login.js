@@ -33,7 +33,7 @@ angular.module('CamaraTermicaApp').controller('loginController', ['$scope', 'sec
           $scope.datos = {};
         } else {
           $sessionStorage.usuario = response.data.usuario[0];
-          if ($sessionStorage.usuario.rol_id == rolAdmin) {
+          if ($sessionStorage.usuario.id_rol == rolAdmin) {
             $location.path('/inicioSistemaControl');
           } else {
             $location.path('/moduloInteractuar');
