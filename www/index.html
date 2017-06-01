@@ -28,9 +28,7 @@
         <script src="js/jquery-1.12.4.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         
-        <!--middleware-->
-        <script src="app/middleware/middleware.comprobarPermisoAdministracion.js"></script>
-        <script src="app/middleware/middleware.comprobarPermisoInvitado.js"></script>
+        <!-- Enlazamos middleware -->
         <script src="app/middleware/middleware.comprobarSession.js"></script>
         <script src="app/middleware/middleware.comprobarNoTenerSession.js"></script>
 
@@ -41,25 +39,28 @@
         <!-- servicios -->
         <script src="app/services/service.servidor.js"></script>
         <script src="app/services/service.security.js"></script>
+        <script src="app/services/service.usuario.js"></script>
 
         <!-- enlazamos los controllers -->
+        <script src="app/controller/controller.consultaG.js"></script>
+        <script src="app/controller/controller.extractores.js" ></script>
+        <script src="app/controller/controller.graficaConsultaG.js" ></script>
+        <script src="app/controller/controller.graficaHumedadR.js" ></script>
+        <script src="app/controller/controller.graficaHumedadS.js"></script>
+        <script src="app/controller/controller.graficaTemperatura.js"></script>
+        <script src="app/controller/controller.guardarUsuario.js"></script>
+        <script src="app/controller/controller.humedadR.js"></script>
+        <script src="app/controller/controller.humedadS.js"></script>
         <script src="app/controller/controller.index.js"></script>
+        <script src="app/controller/controller.inicioSistemaControl.js"></script>
         <script src="app/controller/controller.login.js"></script>
-        <script src="app/controller/controller.registrate.js"></script>
+        <script src="app/controller/controller.logout.js"></script>
         <script src="app/controller/controller.modulo.js"></script>
         <script src="app/controller/controller.monitoreo.js"></script>
-        <script src="app/controller/controller.temperatura.js"></script>
-        <script src="app/controller/controller.graficaTemperatura.js"></script>
-        <script src="app/controller/controller.humedadR.js"></script>
-        <script src="app/controller/controller.graficaHumedadR.js"></script>
-        <script src="app/controller/controller.humedadS.js"></script>
-        <script src="app/controller/controller.graficaHumedadS.js"></script>
-        <script src="app/controller/controller.consultaG.js"></script>
-        <script src="app/controller/controller.graficaConsultaG.js"></script>
-        <script src="app/controller/controller.inicioSistemaControl.js"></script>
+        <script src="app/controller/controller.registrarUsuario.js"></script>
+        <script src="app/controller/controller.registrate.js"></script>
         <script src="app/controller/controller.sistemaControl.js"></script>
-        <script src="app/controller/controller.extractores.js"></script>
+        <script src="app/controller/controller.temperatura.js"></script>
         <script src="app/controller/controller.valvula.js"></script>
-        <script src="app/controller/controller.logout.js"></script>
     </body>
 </html>

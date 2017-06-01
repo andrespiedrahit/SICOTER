@@ -12,5 +12,5 @@ interface  Iusuario {
 
   public function delete($id);
   
-  public function search($id);
+  public function search($user, $contrasena);
 }

@@ -26,23 +26,19 @@ angular.module('CamaraTermicaApp').controller('loginController', ['$scope', 'sec
 //                }
 //           
       security.validateUserAndPassword($scope.datos).then(function successCallback(response) {
-        console.log(response);
-        $scope.usuarioErroneo = false;
-        if (response.data.codigo == 500) {
-          $scope.usuarioErroneo = true;
-          $scope.datos = {};
-        } else {
-          $sessionStorage.usuario = response.data.usuario[0];
-          if ($sessionStorage.usuario.id_rol == rolAdmin) {
-            $location.path('/inicioSistemaControl');
-          } else {
-            $location.path('/moduloInteractuar');
-          }
-        }
-      }, function errorCallback(response) {
-        console.error(response);
-      });
-      
-    };
-  }]);
+               console.log(response);
+                $scope.usuarioErroneo = false;
+                if (response.data.code == 500) {
+                    $scope.usuarioErroneo = true;
+                    $scope.datos = {};
+                } else {
+                    $sessionStorage.usuario = response.data.datos[0];
+                    $location.path('/modulo');
+                }
+            }, function errorCallback(response) {
+                console.error(response);
+            });
+
+        };
+    }]);
 

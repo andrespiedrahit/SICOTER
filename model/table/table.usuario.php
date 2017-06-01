@@ -7,9 +7,6 @@ class usuario {
     private $nombre;
     private $apellido;
     private $contrasena;
-    private $created_at;
-    private $updated_at;
-    private $deleted_at;
     private $rol_id;
     private $correo;
     
@@ -37,17 +34,7 @@ class usuario {
         return $this->contrasena;
     }
 
-    public function getCreated_at() {
-        return $this->created_at;
-    }
-
-    public function getUpdated_at() {
-        return $this->updated_at;
-    }
-
-    public function getDeleted_at() {
-        return $this->deleted_at;
-    }
+    
 
     public function getRol_id() {
         return $this->rol_id;
@@ -73,21 +60,13 @@ class usuario {
         $this->apellido = $apellido;
     }
 
-    public function setContrasena($contrasena) {
-        $this->contrasena = $contrasena;
-    }
+ 
+    
+    function setContrasena($contrasena,$hash) {
+        $this->contrasena =hash($hash, $contrasena, false);
+    }  
 
-    public function setCreated_at($created_at) {
-        $this->created_at = $created_at;
-    }
-
-    public function setUpdated_at($updated_at) {
-        $this->updated_at = $updated_at;
-    }
-
-    public function setDeleted_at($deleted_at) {
-        $this->deleted_at = $deleted_at;
-    }
+    
 
     public function setRol_id($rol_id) {
         $this->rol_id = $rol_id;

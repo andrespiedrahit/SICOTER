@@ -11,28 +11,25 @@ class usuarioDAO extends dataSource implements Iusuario {
     }
 
     public function insert(\usuario $usuario) {
-        $sql = 'INSERT INTO tblusuario (usu_id,usu_alias,usu_cedula,usu_nombre,usu_apellido,usu_contrasena,usu_created_at,usu_updated_at,usu_deleted_at,rol_id,usu_correo) VALUES (:id,:ali,:ced,:nom,:ape,:cont,:crea,:upd,:del,:rol,:corr)';
+        $sql = 'INSERT INTO tblusuario (usu_alias,usu_cedula,usu_nombre,usu_apellido,usu_contrasena,rol_id,usu_correo) VALUES (:ali,:ced,:nom,:ape,:cont,:rol,:corr)';
         $params = array(
-//            ,:,:,:contra
-            ':id' => $usuario->getId(),
+//            ,:,:,:contra            
             ':ali' => $usuario->getAlias(),
             ':ced' => $usuario->getCedula(),
             ':nom' => $usuario->getNombre(),
             ':ape' => $usuario->getApellido(),
-            ':cont' => $usuario->getContrasena(),
-            ':crea' => $usuario->getCreated_at(),
-            ':upd' => $usuario->getUpdated_at(),
-            ':del' => $usuario->getDeleted_at(),
             ':rol' => $usuario->getRol_id(),
+            ':cont' => $usuario->getContrasena(),
             ':corr' => $usuario->getCorreo(),
         );
         return $this->execute($sql, $params);
     }
 
-    public function search($nombre) {
-        $sql = 'SELECT usu_id,usu_alias,usu_cedula,usu_nombre,usu_apellido,usu_contrasena,usu_created_at,usu_updated_at,usu_deleted_at,rol_id,usu_correo FROM tblusuario WHERE usu_nombre = :nomb';
+    public function search($alias, $contrasena) {
+        $sql = 'SELECT usu_id,usu_alias,usu_cedula,usu_nombre,usu_apellido,usu_contrasena, rol_id,usu_correo FROM tblusuario WHERE usu_alias = :alias AND usu_contrasena = :contrasena';
         $params = array(
-            ':nomb' => $nombre
+            ':alias' => $alias,
+            ':contrasena' => $contrasena
         );
         return $this->query($sql, $params);
     }
