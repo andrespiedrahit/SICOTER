@@ -13,10 +13,10 @@ class muestreoRelativa extends controllerExtended {
     }
 
     private function loadTableRelativas() {
-        require $this->getConfig()->getPath() . 'model/table/table.relativa.php';
-        require $this->getConfig()->getPath() . 'model/interface/interface.relativa.php';
-        require $this->getConfig()->getPath() . 'model/DAO/class.relativaDAO.php';
-        require $this->getConfig()->getPath() . 'model/extended/class.relativaDAOExt.php';
+        require $this->getConfig()->getPath() . 'model/table/table.temperatura.php';
+        require $this->getConfig()->getPath() . 'model/interface/interface.temperatura.php';
+        require $this->getConfig()->getPath() . 'model/DAO/class.temperaturaDAO.php';
+        require $this->getConfig()->getPath() . 'model/extended/class.temperaturaDAOExt.php';
     }
 
 }

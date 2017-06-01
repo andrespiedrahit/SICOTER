@@ -3,7 +3,7 @@
 class rolDAO extends dataSource implements IRol {
 
     public function delete($id) {
-        $sql = 'DELETE FROM tblrol WHERE id_rol = :id';
+        $sql = 'DELETE FROM tblrol WHERE rol_id = :id';
         $params = array(
             ':id' => $id
         );
@@ -11,7 +11,7 @@ class rolDAO extends dataSource implements IRol {
     }
 
     public function insert(\roles $rol) {
-        $sql = 'INSERT INTO tblrol (id_rol,nombre) VALUES (:id,:nomb)';
+        $sql = 'INSERT INTO tblrol (rol_id,rol_nombre) VALUES (:id,:nomb)';
         $params = array(
             ':id' => $rol->getId(),
             ':nomb' => $rol->getNombre()
@@ -20,7 +20,7 @@ class rolDAO extends dataSource implements IRol {
     }
 
     public function search($nombre) {
-        $sql = 'SELECT id_rol,nombre FROM tblrol WHERE nombre = :nomb';
+        $sql = 'SELECT rol_id, rol_nombre FROM tblrol WHERE rol_nombre = :nomb';
         $params = array(
             ':nomb' => $nombre
         );
@@ -28,12 +28,12 @@ class rolDAO extends dataSource implements IRol {
     }
 
     public function select() {
-        $sql = 'SELECT id_rol,nombre FROM tblrol';
+        $sql = 'SELECT rol_id, rol_nombre FROM tblrol';
         return $this->query($sql);
     }
 
     public function selectById($id) {
-        $sql = 'SELECT nombre FROM tblrol WHERE id_rol = :id';
+        $sql = 'SELECT rol_nombre FROM tblrol WHERE rol_id = :id';
         $params = array(
             ':id' => $id
         );
@@ -41,7 +41,7 @@ class rolDAO extends dataSource implements IRol {
     }
 
     public function update(\roles $rol) {
-        $sql = 'UPDATE tblrol SET nombre = :nomb WHERE id_rol = :id';
+        $sql = 'UPDATE tblrol SET rol_nombre = :nomb WHERE rol_id = :id';
         $params = array(
             ':nomb' => $rol->getNombre(),            
             ':id' => $rol->getId()

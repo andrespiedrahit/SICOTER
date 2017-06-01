@@ -3,25 +3,25 @@
 class relativaDAO extends dataSource implements IRelativa {
 
     public function delete($id) {
-        $sql = 'DELETE FROM tblhumedadrelativa WHERE id_humedadrelativa = :id';
+        $sql = 'DELETE FROM tblhumedadrelativa WHERE rel_id = :id';
         $params = array(
             ':id' => $id
         );
         return $this->execute($sql, $params);
     }
 
-    public function insert(\variables $variable) {
-        $sql = 'INSERT INTO tblhumedadrelativa (fecha_relativa, nombre,valor_relativa) VALUES (:fec, :nomb,:val)';
+    public function insert(\relativas $relativa) {
+        $sql = 'INSERT INTO tblhumedadrelativa (rel_nombre,rel_fecha,rel_valor) VALUES (:nomb,:fec,:val)';
         $params = array(
-            ':nomb' => $variable->getNombre(),
-            ':fec' => $variable->getFecha(),
-            ':val' => $variable->getValor()
+            ':nomb' => $relativa->getNombre(),
+            ':val' => $relativa->getValor(),
+            ':fec' => $relativa->getFecha(),
         );
         return $this->execute($sql, $params);
     }
 
     public function search($valor, $fecha) {
-        $sql = 'SELECT id_humedadrelativa FROM tblhumedadrelativa WHERE fecha_relativa = :fec AND valor_relativa = :val';
+        $sql = 'SELECT rel_id FROM tblhumedadrelativa WHERE rel_fecha = :fec AND rel_valor = :val';
         $params = array(
             ':val' => $valor,
             ':fec' => $fecha
@@ -30,12 +30,12 @@ class relativaDAO extends dataSource implements IRelativa {
     }
 
     public function select() {
-        $sql = 'SELECT id_humedadrelativa,valor_relativa,fecha_relativa FROM tblhumedadrelativa';
+        $sql = 'SELECT rel_id,rel_nombre,rel_fecha,rel_valor FROM tblhumedadrelativa';
         return $this->query($sql);
     }
 
     public function selectById($id) {
-        $sql = 'SELECT nombre, fecha_relativa,valor_relativa FROM tblhumedadrelativa WHERE id_humedadrelativa = :id';
+        $sql = 'SELECT rel_nombre, rel_fecha,rel_valor FROM tblhumedadrelativa WHERE rel_id = :id';
         $params = array(
             ':id' => $id
         );
@@ -43,7 +43,7 @@ class relativaDAO extends dataSource implements IRelativa {
     }
 
     public function update(\relativas $relativa) {
-        $sql = 'UPDATE tblhumedadrelativa SET nombre = :nomb, fecha_relativa = :fec,valor_Relativa=:val WHERE id_humedadrelativa = :id';
+        $sql = 'UPDATE tblhumedadrelativa SET rel_nombre = :nomb, rel_fecha = :fec, rel_valor=:val WHERE rel_id = :id';
         $params = array(
             ':nomb' => $relativa->getNombre(),
             ':fec' => $relativa->getFecha(),

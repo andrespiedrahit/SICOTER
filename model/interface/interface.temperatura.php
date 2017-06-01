@@ -1,6 +1,6 @@
 <?php
 
-interface  IVariables {
+interface ITemperatura {
 
   public function select();
 

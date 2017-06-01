@@ -1,6 +1,6 @@
 <?php
 
-class relativas {
+class suelo {
 
     private $id;
     private $nombre;

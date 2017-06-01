@@ -4,65 +4,128 @@
   <DefTblOpts/>
   <DocFolder>C:\Users\ADSI\Documents</DocFolder>
   <Sch Cm="" nm="public">
-    <Tbl UsSo="1" nm="Rol">
+    <Tbl UsSo="1" nm="tblhumedadrelativa">
       <TblOpts>WITHOUT OIDS</TblOpts>
-      <Pk ClNs="id_rol" nm="pkRol"/>
-      <Cl au="0" df="" nm="id_rol" nu="0">
+      <Pk ClNs="rel_id" nm="pktblhumedadrelativa"/>
+      <Cl au="1" df="nextval('tblhumedadrelativa_rel_id_seq'::regclass)" nm="rel_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="rel_nombre" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="20" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="rel_fecha" nu="0">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="rel_valor" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="10" sc="null" sg="1" un="0"/>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="tblhumedadsuelo">
+      <TblOpts>WITHOUT OIDS</TblOpts>
+      <Pk ClNs="su_id" nm="pktblhumedadsuelo"/>
+      <Cl au="1" df="nextval('tblhumedadsuelo_su_id_seq'::regclass)" nm="su_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="su_nombre" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="20" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="su_fecha" nu="0">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="su_valor" nu="0">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="tblrol">
+      <TblOpts>WITHOUT OIDS</TblOpts>
+      <Pk ClNs="rol_id" nm="pktblrol"/>
+      <Cl au="0" df="" nm="rol_id" nu="0">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
-      <Cl au="0" df="" nm="nombre" nu="0">
+      <Cl au="0" df="" nm="rol_nombre" nu="0">
         <DT arr="0" ds="VarChar" en="" id="12" ln="20" sc="null" sg="1" un="0"/>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
     </Tbl>
-    <Tbl UsSo="1" nm="tblusuarios">
+    <Tbl UsSo="1" nm="tbltemperatura">
       <TblOpts>WITHOUT OIDS</TblOpts>
-      <Pk ClNs="id_usuario" nm="pktblusuarios"/>
-      <Cl au="0" df="" nm="id_usuario" nu="0">
-        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+      <Pk ClNs="temp_id" nm="pktbltemperatura"/>
+      <Cl au="1" df="nextval('tbltemperatura_temp_id_seq'::regclass)" nm="temp_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
-      <Cl au="0" df="" nm="id_rol" nu="0">
-        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+      <Cl au="0" df="" nm="temp_nombre" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="20" sc="null" sg="1" un="0"/>
       </Cl>
-      <Cl au="0" df="" nm="nombres" nu="0">
+      <Cl au="0" df="" nm="temp_fecha" nu="0">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="temp_valor" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="10" sc="null" sg="1" un="0"/>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="tblusuario">
+      <TblOpts>WITHOUT OIDS</TblOpts>
+      <Pk ClNs="usu_id" nm="pktblusuario"/>
+      <Cl au="1" df="nextval('tblusuario_usu_id_seq'::regclass)" nm="usu_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_alias" nu="0">
         <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
       </Cl>
-      <Cl au="0" df="" nm="apellidos" nu="0">
+      <Cl au="0" df="" nm="usu_cedula" nu="0">
         <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
       </Cl>
-      <Cl au="0" df="" nm="correo" nu="0">
+      <Cl au="0" df="" nm="usu_nombre" nu="0">
         <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
       </Cl>
-      <Cl au="0" df="" nm="Contrasena" nu="0">
+      <Cl au="0" df="" nm="usu_apellido" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="45" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_contrasena" nu="0">
         <DT arr="0" ds="VarChar" en="" id="12" ln="32" sc="null" sg="1" un="0"/>
       </Cl>
-      <Fk deAc="1" nm="fk_tblusuarios_Rol" prLkCl="id_rol" upAc="1">
-        <PrTb mn="0" nm="Rol" oe="1" sch="public" zr="0"/>
-        <CdTb mn="1" nm="tblusuarios" oe="1" sch="public" zr="0"/>
-        <ClPr cdCl="id_rol" prCl="id_rol"/>
+      <Cl au="0" df="Now()" nm="usu_created_at" nu="0">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_updated_at" nu="1">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_deleted_at" nu="1">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="rol_id" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="usu_correo" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="45" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Fk deAc="1" nm="fk_tblusuario_tblrol" prLkCl="rol_id" upAc="1">
+        <PrTb mn="0" nm="tblrol" oe="1" sch="public" zr="1"/>
+        <CdTb mn="1" nm="tblusuario" oe="1" sch="public" zr="0"/>
+        <ClPr cdCl="rol_id" prCl="rol_id"/>
       </Fk>
       <UniqueConstraints/>
       <SchTrHis/>
     </Tbl>
-    <Tbl UsSo="1" nm="tblvariables">
-      <TblOpts>WITHOUT OIDS</TblOpts>
-      <Pk ClNs="Id_variables" nm="pktblvariables"/>
-      <Cl au="1" df="nextval('&quot;tblvariables_Id_variables_seq&quot;'::regclass)" nm="Id_variables" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="nombre" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="20" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="fecha" nu="0">
-        <DT arr="0" ds="Date" en="" id="91" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="valor" nu="0">
-        <DT arr="0" ds="Float" en="" id="6" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <UniqueConstraints/>
-      <SchTrHis/>
-    </Tbl>
+    <Seq incr="1" nm="tblhumedadrelativa_rel_id_seq">
+      <Cm>DbWrench Autogenerated Sequence.</Cm>
+    </Seq>
+    <Seq incr="1" nm="tblhumedadsuelo_su_id_seq">
+      <Cm>DbWrench Autogenerated Sequence.</Cm>
+    </Seq>
+    <Seq incr="1" nm="tbltemperatura_temp_id_seq">
+      <Cm>DbWrench Autogenerated Sequence.</Cm>
+    </Seq>
+    <Seq incr="1" nm="tblusuario_usu_id_seq">
+      <Cm>DbWrench Autogenerated Sequence.</Cm>
+    </Seq>
     <Seq incr="1" nm="tblvariables_Id_variables_seq">
       <Cm>DbWrench Autogenerated Sequence.</Cm>
     </Seq>
@@ -90,38 +153,71 @@
       <DbTableRectangleFill>HeaderFooterFill</DbTableRectangleFill>
       <svg path=""/>
     </DiaProps>
-    <TbGl bkCl="ff6666ff" sch="public" tbl="tblvariables" x="289" y="189"/>
-    <TbGl bkCl="ff6666ff" sch="public" tbl="tblusuarios" x="573" y="67"/>
-    <TbGl bkCl="ff6666ff" sch="public" tbl="Rol" x="625" y="267"/>
-    <FkGl bkCl="ff000000" childEdge="SOUTH" nm="public.tblusuarios.fk_tblusuarios_Rol" parentEdge="NORTH" positioner="OneLineUserLinkPositioner">
+    <TbGl bkCl="ff6666ff" sch="public" tbl="tblusuario" x="37" y="57"/>
+    <TbGl bkCl="ff6666ff" sch="public" tbl="tblrol" x="402" y="102"/>
+    <TbGl bkCl="ff6666ff" sch="public" tbl="tbltemperatura" x="253" y="263"/>
+    <TbGl bkCl="ff6666ff" sch="public" tbl="tblhumedadrelativa" x="37" y="264"/>
+    <TbGl bkCl="ff6666ff" sch="public" tbl="tblhumedadsuelo" x="494" y="266"/>
+    <FkGl bkCl="ff000000" childEdge="" nm="public.tblusuario.fk_tblusuario_tblrol" parentEdge="" positioner="">
       <positionableLines/>
     </FkGl>
     <Notes/>
     <Zones/>
   </Dgm>
-  <RnmMgr NxRnmId="10">
+  <RnmMgr NxRnmId="27">
     <RnmCh ObjCls="Schema" ParCls="Database" ParNme="newDb" SupCls="" SupNme="">
       <Rnm id="1" nNm="public" oNm="schemaA"/>
     </RnmCh>
     <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblvariables" SupCls="Schema" SupNme="public">
       <Rnm id="2" nNm="Id_variables" oNm="Id"/>
     </RnmCh>
-    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblusuarios" SupCls="Schema" SupNme="public">
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblusuario" SupCls="Schema" SupNme="public">
+      <Rnm id="10" nNm="usu_id" oNm="id_usuario"/>
       <Rnm id="6" nNm="id_usuario" oNm="Id_usuario"/>
       <Rnm id="3" nNm="Id_usuario" oNm="Id"/>
     </RnmCh>
-    <RnmCh ObjCls="Column" ParCls="Table" ParNme="Rol" SupCls="Schema" SupNme="public">
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblrol" SupCls="Schema" SupNme="public">
+      <Rnm id="19" nNm="rol_id" oNm="id_rol"/>
       <Rnm id="5" nNm="id_rol" oNm="Id_Rol"/>
       <Rnm id="4" nNm="Id_Rol" oNm="Id"/>
     </RnmCh>
-    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblusuarios" SupCls="Schema" SupNme="public">
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblusuario" SupCls="Schema" SupNme="public">
+      <Rnm id="16" nNm="usu_alias" oNm="usu_cedula"/>
+      <Rnm id="11" nNm="usu_cedula" oNm="nombres"/>
       <Rnm id="7" nNm="nombres" oNm="Nombres"/>
     </RnmCh>
-    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblusuarios" SupCls="Schema" SupNme="public">
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblusuario" SupCls="Schema" SupNme="public">
+      <Rnm id="17" nNm="usu_cedula" oNm="usu_nombre"/>
+      <Rnm id="12" nNm="usu_nombre" oNm="apellidos"/>
       <Rnm id="8" nNm="apellidos" oNm="Apellidos"/>
     </RnmCh>
-    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblusuarios" SupCls="Schema" SupNme="public">
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblusuario" SupCls="Schema" SupNme="public">
+      <Rnm id="18" nNm="usu_nombre" oNm="usu_apellido"/>
+      <Rnm id="13" nNm="usu_apellido" oNm="correo"/>
       <Rnm id="9" nNm="correo" oNm="Correo"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblusuario" SupCls="Schema" SupNme="public">
+      <Rnm id="26" nNm="usu_apellido" oNm="usu_aliass"/>
+      <Rnm id="15" nNm="usu_aliass" oNm="usu_alias"/>
+      <Rnm id="14" nNm="usu_alias" oNm="Contrasena"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="public" SupCls="" SupNme="">
+      <Rnm id="20" nNm="tblrol" oNm="Rol"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblrol" SupCls="Schema" SupNme="public">
+      <Rnm id="21" nNm="rol_nombre" oNm="nombre"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="public" SupCls="" SupNme="">
+      <Rnm id="22" nNm="tblusuario" oNm="tblusuarios"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tbltemperatura" SupCls="Schema" SupNme="public">
+      <Rnm id="23" nNm="temp_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblhumedadrelativa" SupCls="Schema" SupNme="public">
+      <Rnm id="24" nNm="rel_id" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tblhumedadsuelo" SupCls="Schema" SupNme="public">
+      <Rnm id="25" nNm="su_id" oNm="Id"/>
     </RnmCh>
   </RnmMgr>
   <DbDocOptionMgr>

@@ -1,6 +1,6 @@
 <?php
 
-class relativas {
+class temperatura {
 
     private $id;
     private $nombre;
