@@ -48,90 +48,26 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>id</th>
                         <th>Alias del Usuario</th>
                         <th>Cedula</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
+                        <th>Correo</th>
                         <th>Rol del Usuario</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr  class="active">
-                        <td>1</td>
-                        <td>peppa7</td>
-                        <td>1234567892</td>
-                        <td>juan</td>
-                        <td>perez</td>
-                        <td>administrador</td>
+                    <tr ng-repeat="data in dataTable">
+                        <td>{{data.usu_alias}}</td>
+                        <td>{{data.usu_cedula}}</td>
+                        <td>{{data.usu_nombre}}</td>
+                        <td>{{data.usu_apellido}}</td>
+                        <td>{{data.usu_correo}}</td>
+                        <td>{{data.rol_id}}</td>
                         <td><image src="img/delete.png" data-toggle="modal" data-target="#myModal2"/>...<image src="img/edit.png" data-toggle="modal" data-target="#myModal"/></td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr  class="active">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr  class="active">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr  class="active">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
                 </tbody>
-
             </table>
         </div>
     </div>
@@ -148,39 +84,39 @@
                 <h4 class="modal-title" id="myModalLabel">Nuevo Usuario</h4>
             </div>
             <div class="modal-body">
-                <form>
+                <form ng-submit="guardarUsuario">
                     <div>
-                        <input type="text" class="form-control" id="aliasusuario" name="aliasusuario" placeholder="Alias del Usuario">
+                        <input ng-model="datousu.alias" type="text" class="form-control" id="aliasusuario" name="aliasusuario" placeholder="Alias del Usuario">
                     </div>
                     <br>
                     <div >
                         <div class="alert alert-danger" ng-show="false">la cedula esta repetida</div>
-                        <input type="number" class="form-control" id="cedula" name="cedula" placeholder="Cedula">
+                        <input ng-model="datousu.cedula" type="number" class="form-control" id="cedula" name="cedula" placeholder="Cedula">
                     </div>
                     <br>
                     <div>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombres">
+                        <input ng-model="datousu.nombre" type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombres">
                     </div>
                     <br>
                     <div>
-                        <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellidos">
+                        <input ng-model="datousu.apellido" type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellidos">
                     </div>
                     <br>
                     <div>
-                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña">
+                        <input ng-model="datousu.contrasena" type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña">
                     </div>
                     <br>
                     <div>
-                        <input type="password" class="form-control" id="repetircontraseña" name="repetircontraseña" placeholder="Repetir Contraseña">
+                        <input ng-model="datousu.repetircontra" type="password" class="form-control" id="repetircontraseña" name="repetircontraseña" placeholder="Repetir Contraseña">
                     </div>
                     <br>
                     <!-- Single button -->
-                    <SELECT class="form-control input-sm" aria-label="..."> 
+                    <SELECT ng-model="datousu.rol" class="form-control input-sm" aria-label="..."> 
                         <OPTION>Administrador</OPTION>
                         <OPTION> Invitado</OPTION> 
                     </SELECT> 
                     <br>
-                    <a href=""><button type="submit" class="btn btn-block btn-lg btn-success">Crear</button></a>
+                    <button type="submit" class="glyphicon glyphicon-floppy-saved">Crear</button>
                 </form>
             </div>
         </div>

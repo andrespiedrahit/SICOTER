@@ -1,16 +1,17 @@
 <?php
 
-class agregarUsuario extends controllerExtended {
+class guardaUsuario extends controllerExtended {
 
     public function main(\request $request) {
         try {
             $this->loadTableUsuario();
             $usuario= new usuario();
+            $usuario->setAlias('alias');
+            $usuario->setCedula('cedula');
             $usuario->setNombre('nombre');
             $usuario->setApellido('apellido');
-            $usuario->setCorreo('correo');
             $usuario->setContrasena($request->getParam('contrasena'),$this->getConfig()->getHash());
-            $usuario->setUsuario('usuario');
+            $usuario->setCorreo('correo');
             
             $usuarioDAO=new usuarioDAOExt($this->getConfig());
             $rspt1=$usuarioDAO->insert($usuario);
@@ -28,7 +29,7 @@ class agregarUsuario extends controllerExtended {
                 );
             }
             $this->setParam('rsp', $rspt2);
-            $this->setView('imprimirJson');
+            $this->setView('json');
             
             
         } catch (Exception $exc) {
