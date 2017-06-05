@@ -1,22 +1,13 @@
 <?php
 
-class agregarUsuario extends controllerExtended {
+class obtenerUsuario extends controllerExtended {
 
   public function main(\request $request) {
     try {
       $this->loadTableusuario();
 
-      $usuario = new usuario();
-      $usuario->setAlias($request->getParam('alias'));
-      $usuario->setCedula($request->getParam('cedula'));
-      $usuario->setNombre($request->getParam('nombre'));
-      $usuario->setApellido($request->getParam('apellido'));
-      $usuario->setContrasena($request->getParam('contrasena'), $this->getConfig()->getHash());
-      $usuario->setRol_id($request->getParam('rol_id'));
-      $usuario->setCorreo($request->getParam('correo'));
-
       $usuarioDAO = new usuarioDAOExt($this->getConfig());
-      $respuesta1 = $usuarioDAO->insert($usuario);
+      $respuesta1 = $usuarioDAO->select();
       $respuesta2 = array(
           'code' => ($respuesta1 > 0) ? 200 : 500,
           'datos' => $respuesta1

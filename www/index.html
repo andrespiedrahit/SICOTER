@@ -31,6 +31,8 @@
         <!-- Enlazamos middleware -->
         <script src="app/middleware/middleware.comprobarSession.js"></script>
         <script src="app/middleware/middleware.comprobarNoTenerSession.js"></script>
+        <script src="app/middleware/middleware.comprobarPermisoDeAdmnistracion.js"></script>
+        <script src="app/middleware/middleware.comprobarPermisoDeInvitado.js"></script>
 
         <!-- enlazamos app.js y app.config.js -->
         <script src="app/app.js"></script>
@@ -40,7 +42,7 @@
         <script src="app/services/service.servidor.js"></script>
         <script src="app/services/service.security.js"></script>
         <script src="app/services/service.usuario.js"></script>
-
+        
         <!-- enlazamos los controllers -->
         <script src="app/controller/controller.consultaG.js"></script>
         <script src="app/controller/controller.extractores.js" ></script>
@@ -57,10 +59,9 @@
         <script src="app/controller/controller.logout.js"></script>
         <script src="app/controller/controller.modulo.js"></script>
         <script src="app/controller/controller.monitoreo.js"></script>
-        <script src="app/controller/controller.registrarUsuario.js"></script>
         <script src="app/controller/controller.registrate.js"></script>
-        <script src="app/controller/controller.sistemaControl.js"></script>
         <script src="app/controller/controller.temperatura.js"></script>
         <script src="app/controller/controller.valvula.js"></script>
+        <script src="app/controller/controller.sistemaUsuarios.js"></script>
     </body>
 </html>

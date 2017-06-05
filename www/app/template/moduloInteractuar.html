@@ -17,7 +17,7 @@
             <ul class="nav navbar-nav navbar-right">
 
                 <li class="dropdown">
-                    <a href="#!/login" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cerrar Sesion</a>
+                    <a href="#!/logout" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cerrar Sesion</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -46,7 +46,7 @@
                     <center><a href="#!/monitoreo"><img src="img/grafico.png"></a></center>
                 </div>
                 <div class="panel-footer footerPanel">
-                    <a class="tituloFooter" href="#!/monitoreo">MONITOREO DE VARIABLES</a>
+                    <a  class="tituloFooter" href="#!/monitoreo">MONITOREO DE VARIABLES</a>
                     <a href="#!/monitoreo"><span class="pull-right"><i class="glyphicon glyphicon-circle-arrow-right iconoFlecha"></i></span></a>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                     <center><a href="#!/inicioSistemaControl"><img src="img/ajustes.png"></a></center>
                 </div>
                 <div class="panel-footer footerPanel">
-                    <a href="#!/inicioSistemaControl" class="tituloFooter">SISTEMA DE CONTROL</a>
+                    <a ng-show="(rol == rolAdmi) ? true : false" href="#!/inicioSistemaControl" class="tituloFooter">SISTEMA DE CONTROL</a>
                     <a href="#!/inicioSistemaControl"><span class="pull-right"><i class="glyphicon glyphicon-circle-arrow-right iconoFlecha"></i></span></a>
                 </div>
             </div>

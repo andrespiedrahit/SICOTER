@@ -16,7 +16,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#!/moduloInteractuar">Regresar</a></li>
                 <li class="dropdown">
-                    <a href="#!/login" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cerrar Sesion</a>
+                    <a href="#!/logout" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cerrar Sesion</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -58,7 +58,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="data in dataTable">
+                    <tr ng-repeat="data in usuarios">
                         <td>{{data.usu_alias}}</td>
                         <td>{{data.usu_cedula}}</td>
                         <td>{{data.usu_nombre}}</td>
@@ -127,7 +127,7 @@
 </div>
 
 <!-- Modal editar -->
-<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!--<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -199,7 +199,7 @@
         </div>
     </div>
 </div>
-<!-- Modal Eliminar -->
+ Modal Eliminar 
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -215,4 +215,4 @@
             </center>
         </div>
     </div>
-</div>
+</div>-->

@@ -13,6 +13,12 @@ angular.module('CamaraTermicaApp').config(['$middlewareProvider', function middl
                 }],
             'comprobarNoTenerSession': ['$sessionStorage', function comprobarNoTenerSession($sessionStorage) {
                     middlewareComprobarNoTenerSession(this, $sessionStorage);
+                }],
+            'comprobarPermisoDeInvitado': ['$localStorage', '$sessionStorage', 'rolInvitado', function comprobarPermisoDeInvitado($localStorage, $sessionStorage, rolInvitado) {
+                    middlewareComprobarPermisoDeInvitado(this, $localStorage, $sessionStorage, rolInvitado);
+                }],
+            'comprobarPermisoDeAdmnistracion': ['$localStorage', '$sessionStorage', 'rolAdmin', function comprobarPermisoDeAdmnistracion($localStorage, $sessionStorage, rolAdmin) {
+                    middlewareComprobarPermisoDeAdmnistracion(this, $localStorage, $sessionStorage, rolAdmin);
                 }]
         });
     }]);
@@ -45,7 +51,7 @@ angular.module('CamaraTermicaApp').config(['$routeProvider', '$httpProvider', fu
                 when('/modulo', {
                     controller: 'moduloController',
                     templateUrl: 'app/template/moduloInteractuar.html',
-                   middleware: ['comprobarSession']
+                    middleware: ['comprobarSession']
                 }).
                 when('/temperatura', {
                     controller: 'temperaturaController',
@@ -55,17 +61,17 @@ angular.module('CamaraTermicaApp').config(['$routeProvider', '$httpProvider', fu
                 when('/monitoreo', {
                     controller: 'monitoreoController',
                     templateUrl: 'app/template/monitoreo.html',
-                   middleware: ['comprobarSession']
+                    middleware: ['comprobarSession']
                 }).
                 when('/graficaTemperatura', {
                     controller: 'graficaTemperaturaController',
                     templateUrl: 'app/template/graficaTemperatura.html',
-                   middleware: ['comprobarSession']
+                    middleware: ['comprobarSession']
                 }).
                 when('/humedadR', {
                     controller: 'humedadRController',
                     templateUrl: 'app/template/humedadR.html',
-                   middleware: ['comprobarSession']
+                    middleware: ['comprobarSession']
                 }).
                 when('/graficaHumedadR', {
                     controller: 'graficaHumedadRController',
@@ -95,22 +101,22 @@ angular.module('CamaraTermicaApp').config(['$routeProvider', '$httpProvider', fu
                 when('/inicioSistemaControl', {
                     controller: 'inicioSistemaControlController',
                     templateUrl: 'app/template/inicioSistemaControl.html',
-                    middleware: ['comprobarSession']
+                    middleware: ['comprobarSession', 'comprobarPermisoDeAdmnistracion']
                 }).
                 when('/sistemaControl', {
-                    controller: 'sistemaControlController',
+                    controller: 'sistemaUsuariosController',
                     templateUrl: 'app/template/sistemaControl.html',
-                   middleware: ['comprobarSession']
+                    middleware: ['comprobarSession', 'comprobarPermisoDeAdmnistracion']
                 }).
                 when('/valvula', {
                     controller: 'valvulaController',
                     templateUrl: 'app/template/valvula.html',
-                   middleware: ['comprobarSession']
+                    middleware: ['comprobarSession', 'comprobarPermisoDeAdmnistracion']
                 }).
                 when('/extractores', {
                     controller: 'extractoresController',
                     templateUrl: 'app/template/extractores.html',
-                    middleware: ['comprobarSession']
+                    middleware: ['comprobarSession', 'comprobarPermisoDeAdmnistracion']
                 }).
                 otherwise('/');
     }
