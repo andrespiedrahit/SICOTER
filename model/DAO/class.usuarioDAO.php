@@ -19,7 +19,7 @@ class usuarioDAO extends dataSource implements Iusuario {
     }
 
     public function insert(\usuario $usuario) {
-        $sql = 'INSERT INTO tblusuario (usu_alias, usu_cedula, usu_nombre, usu_apellido, usu_contrasena, rol_id, usu_correo) VALUES (:ali,:ced,:nom,:ape:con,:rolid,:cor)';
+        $sql = 'INSERT INTO tblusuario (usu_alias, usu_cedula, usu_nombre, usu_apellido, usu_contrasena, rol_id, usu_correo) VALUES (:ali,:ced,:nom,:ape,:con,:rolid,:cor)';
         $params = array(
             ':ali' => $usuario->getAlias(),
             ':ced' => $usuario->getCedula(),

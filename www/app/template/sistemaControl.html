@@ -65,7 +65,8 @@
                         <td>{{data.usu_apellido}}</td>
                         <td>{{data.usu_correo}}</td>
                         <td>{{data.rol_id}}</td>
-                        <td><image src="img/delete.png" data-toggle="modal" data-target="#myModal2"/>...<image src="img/edit.png" data-toggle="modal" data-target="#myModal"/></td>
+                        <td><i ng-click="editar(data)" title="Editar" class="glyphicon glyphicon-pencil iconoTabla"></i>
+                            <i ng-click="eliminar(data)" title="Eliminar" class="glyphicon glyphicon-trash"></i></td>
                     </tr>
                 </tbody>
             </table>
@@ -85,6 +86,9 @@
             </div>
             <div class="modal-body">
                 <form ng-submit="submit()">
+                    <div class="alert alert-success" ng-show="usuarioRegistrado">
+                        <center>Usuario Creado Con Exito</center>
+                    </div>
                     <div>
                         <input ng-model="dataRegistrarUsuario.alias" type="text" class="form-control" id="aliasusuario" name="aliasusuario" placeholder="Alias del Usuario">
                     </div>
@@ -110,16 +114,17 @@
                         <input ng-model="dataRegistrarUsuario.repetircontra" type="password" class="form-control" id="repetircontraseña" name="repetircontraseña" placeholder="Repetir Contraseña">
                     </div>
                     <br>
+                    <div>
+                        <input ng-model="dataRegistrarUsuario.correo" type="text" class="form-control" id="correo" name="correo" placeholder="correo">
+                    </div>
+                    <br>
                     <!-- Single button -->
                     <SELECT ng-model="dataRegistrarUsuario.rolid" class="form-control input-sm" aria-label="..."> 
                         <OPTION value="1">Administrador</OPTION>
                         <OPTION value="2"> Invitado</OPTION> 
                     </SELECT> 
-                    <div>
-                        <input ng-model="dataRegistrarUsuario.correo" type="text" class="form-control" id="correo" name="correo" placeholder="correo">
-                    </div>
                     <br>
-                    <button type="submit" class="glyphicon glyphicon-floppy-saved">Crear</button>
+                    <button type="submit" class="btn btn-primary">Crear</button>
                 </form>
             </div>
         </div>
@@ -127,7 +132,7 @@
 </div>
 
 <!-- Modal editar -->
-<!--<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -139,19 +144,12 @@
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-id-card-o"></i>                            
                         </span>
-                        <input type="text" class="form-control" aria-label="..." readonly placeholder="Cedula">
+                        <input type="text" class="form-control" aria-label="..." readonly placeholder="Alias">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-at"></i>                            
-                        </span>
-                        <input type="text" class="form-control" aria-label="..."  placeholder="Alias">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i>                            
                         </span>
                         <input type="text" class="form-control" aria-label="..."  placeholder="Nombre">
                     </div>
@@ -187,9 +185,14 @@
                         </select>
                     </div>
                 </div>
-
-
-
+                </div><div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i>                            
+                        </span>
+                        <input type="text" class="form-control" aria-label="..."  placeholder="Correo">
+                    </div>
+                </div>
+                
             </div>
             <div class="modal-footer center-block" style="text-align: center">
                 <button type="button" class="btn btn-primary">Aceptar</button>
@@ -198,7 +201,7 @@
             </div>
         </div>
     </div>
-</div>
+</div><!--
  Modal Eliminar 
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">

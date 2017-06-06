@@ -12,7 +12,7 @@ class agregarUsuario extends controllerExtended {
       $usuario->setNombre($request->getParam('nombre'));
       $usuario->setApellido($request->getParam('apellido'));
       $usuario->setContrasena($request->getParam('contrasena'), $this->getConfig()->getHash());
-      $usuario->setRol_id($request->getParam('rol_id'));
+      $usuario->setRol_id($request->getParam('rolid'));
       $usuario->setCorreo($request->getParam('correo'));
 
       $usuarioDAO = new usuarioDAOExt($this->getConfig());

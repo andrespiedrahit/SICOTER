@@ -53,36 +53,41 @@ angular.module('CamaraTermicaApp').controller('sistemaUsuariosController', ['$sc
         };
 
 
-//        $scope.editar = function (dato) {
-//            $scope.edit.id = dato.usu_id;
-//            $scope.edit.correo = dato.usu_correo;
-//            $scope.edit.usuario = dato.usu_usuario;
-//            $scope.edit.contrasena = dato.usu_contrasena;
-//
-//            $('#editarUsuario').modal('toggle');
-//        };
-//
-//        $scope.submitEditarUsuario = function () {
-//            agregarUsuario.editarUsu($scope.edit).then(function successCallback(response) {
-//                $scope.usuarioEditado = false;
-//                $scope.edit = {};
-//                if (response.data.code == 500) {
-//                } else {
-//                    $scope.usuarioEditado = true;
-//                    $scope.edit = '';
-//                    $timeout(function () {
-//                        $('#editarUsuario').modal('toggle');
-//                    }, 700);
-//                    $timeout(function () {
-//                        // $route.reload();
-//                        //window.location.reload();
-//                    }, 1000);
-//                }
-//            }, function errorCallback(response) {
-//                console.error(response);
-//            });
-//        };
-//
+        $scope.editar = function (dato) {
+            $scope.edit.id = dato.usu_id;
+            $scope.edit.alias = dato.usu_alias;
+            $scope.edit.nombre = dato.usu_nombre;
+            $scope.edit.alias = dato.usu_apellido;
+            $scope.edit.contrasena = dato.usu_contrasena;
+            $scope.edit.rolid = dato.rol_id;
+            $scope.edit.correo = dato.usu_correo;
+            
+            
+
+            $('#editarUsuario').modal('toggle');
+        };
+
+        $scope.submitEditarUsuario = function () {
+            agregarUsuario.editarUsu($scope.edit).then(function successCallback(response) {
+                $scope.usuarioEditado = false;
+                $scope.edit = {};
+                if (response.data.code == 500) {
+                } else {
+                    $scope.usuarioEditado = true;
+                    $scope.edit = '';
+                    $timeout(function () {
+                        $('#editarUsuario').modal('toggle');
+                    }, 700);
+                    $timeout(function () {
+                        // $route.reload();
+                        //window.location.reload();
+                    }, 1000);
+                }
+            }, function errorCallback(response) {
+                console.error(response);
+            });
+        };
+
 //
 //        $scope.eliminar = function (dato) {
 //            $('#eliminarUsuario').modal('toggle');
