@@ -28,7 +28,6 @@ class usuarioDAO extends dataSource implements Iusuario {
             ':con' => $usuario->getContrasena(),
             ':rolid' => $usuario->getRol_id(),
             ':cor' => $usuario->getCorreo(),
-            
         );
         return $this->execute($sql, $params);
     }
@@ -56,13 +55,12 @@ class usuarioDAO extends dataSource implements Iusuario {
     }
 
     public function update(\usuario $usuario) {
-        $sql = 'UPDATE tblusuario SET usu_alias=:ali, usu_cedula = :ced, usu_nombre=:nom,usu_apellido=:ape, usu_contrasena = :con, rol_id=:rolid,usu_correo=:cor WHERE usu_id = :id';
+        $sql = 'UPDATE tblusuario SET usu_alias=:ali,  usu_nombre=:nom,usu_apellido=:ape, usu_contrasena = :con, rol_id=:rolid,usu_correo=:cor WHERE usu_id = :id';
         $params = array(
             ':ali' => $usuario->getAlias(),
-            ':ced' => $usuario->getCedula(),
             ':nom' => $usuario->getNombre(),
             ':ape' => $usuario->getApellido(),
-             ':contrasena' => $usuario->getContrasena($this->getConfig()->getHash()),
+            ':con' => $usuario->getContrasena($this->getConfig()->getHash()),
             ':rolid' => $usuario->getRol_id(),
             ':cor' => $usuario->getCorreo(),
             ':id' => $usuario->getId(),

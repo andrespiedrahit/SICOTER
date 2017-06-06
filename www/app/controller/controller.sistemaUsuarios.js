@@ -57,7 +57,7 @@ angular.module('CamaraTermicaApp').controller('sistemaUsuariosController', ['$sc
             $scope.edit.id = dato.usu_id;
             $scope.edit.alias = dato.usu_alias;
             $scope.edit.nombre = dato.usu_nombre;
-            $scope.edit.alias = dato.usu_apellido;
+            $scope.edit.apellido = dato.usu_apellido;
             $scope.edit.contrasena = dato.usu_contrasena;
             $scope.edit.rolid = dato.rol_id;
             $scope.edit.correo = dato.usu_correo;
@@ -80,7 +80,7 @@ angular.module('CamaraTermicaApp').controller('sistemaUsuariosController', ['$sc
                     }, 700);
                     $timeout(function () {
                         // $route.reload();
-                        //window.location.reload();
+                        window.location.reload();
                     }, 1000);
                 }
             }, function errorCallback(response) {
@@ -88,30 +88,30 @@ angular.module('CamaraTermicaApp').controller('sistemaUsuariosController', ['$sc
             });
         };
 
-//
-//        $scope.eliminar = function (dato) {
-//            $('#eliminarUsuario').modal('toggle');
-//            $scope.cedula = dato.usu_cedula;
-//            $scope.ideliminar = dato.usu_id;
-//        };
-//
-//        $scope.submitEliminarUsuario = function () {
-//            agregarUsuario.eliminarUsu({id: $scope.ideliminar}).then(function successCallback(response) {
-//                $scope.usuarioEliminado = false;
-//                if (response.data.code == 500) {
-//                } else {
-//                    $scope.usuarioEliminado = true;
-//                    $timeout(function () {
-//                        $('#eliminarUsuario').modal('toggle');
-//                    }, 700);
-//                    $timeout(function () {
-//                        // $route.reload();
-//                        window.location.reload();
-//                    }, 1000);
-//                }
-//            }, function errorCallback(response) {
-//                console.error(response);
-//            });
-//        };
+
+        $scope.eliminar = function (dato) {
+            $('#eliminarUsuario').modal('toggle');
+            $scope.cedula = dato.usu_cedula;
+            $scope.ideliminar = dato.usu_id;
+        };
+
+        $scope.submitEliminarUsuario = function () {
+            agregarUsuario.eliminarUsu({id: $scope.ideliminar}).then(function successCallback(response) {
+                $scope.usuarioEliminado = false;
+                if (response.data.code == 500) {
+                } else {
+                    $scope.usuarioEliminado = true;
+                    $timeout(function () {
+                        $('#eliminarUsuario').modal('toggle');
+                    }, 700);
+                    $timeout(function () {
+                        // $route.reload();
+                        window.location.reload();
+                    }, 1000);
+                }
+            }, function errorCallback(response) {
+                console.error(response);
+            });
+        };
 
     }]);
