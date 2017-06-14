@@ -107,24 +107,30 @@
                            Id
                         </td>
                         <td>
-                            Valor de Temperatura
+                            Nombre de Temperatura
                         </td>
                         <td>
-                            Fecha de Temperatura
+                            Fecha y Hora
+                        </td>
+                        <td>
+                            ºC
                         </td>
                         
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="data in dataTable">
+                    <tr ng-repeat="data in tablaTem">
                          <td>
-                            {{data.id_temperatura}}
+                            {{data.temp_id}}
                         </td>
                         <td>
-                            {{data.valor_temperatura}}
+                            {{data.temp_nombre}}
                         </td>
                         <td>
-                            {{data.fecha_temperatura}}
+                            {{data.temp_fecha}}
+                        </td>
+                        <td>
+                            {{data.temp_valor}}
                         </td>
                     </tr>
                 </tbody>

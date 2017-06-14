@@ -103,60 +103,27 @@
                 <thead>
                     <tr>
                         <td>
-                            Valor variable
+                            Id
                         </td>
                         <td>
-                            Cº
+                            Nombre de Variable
                         </td>
                         <td>
-                            Fecha y hora
+                            Fecha y Hora
+                        </td>
+                        <td>
+                            ºC
                         </td>
                     </tr>
                 </thead>
-                <tr>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                </tr>
+                <tbody>
+                    <tr ng-repeat="x in tablaHS">
+                        <td>{{x.su_id}}</td>
+                        <td>{{x.su_nombre}}</td>
+                        <td>{{x.su_fecha}}</td>
+                        <td>{{x.su_valor}}</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>

@@ -1,17 +1,18 @@
-angular.module('CamaraTermicaApp').controller('temperaturaController', ['$scope', 'servidorService', function ($scope, servidorService) {
-        $scope.dataTable = [];
+angular.module('CamaraTermicaApp').controller('temperaturaController', ['$scope', 'temperaturaService', function ($scope, servidorService) {
 
-//        $scope.consultar = function () {
-//            servidorService.getMuestreoTemperatura.then(function successCallback(response) {
-//                $scope.dataTable = response.data;
-//            }, function errorCallback(response) {
-//                console.log(response);
-//            });
-//        };
+        $scope.tablaTem = {};
 
-        servidorService.getMuestreoTemperatura.then(function successCallback(response) {
-            $scope.dataTable = response.data;
-        }, function errorCallback(response) {
-            console.log(response);
-        });
+        $scope.pintarTabla = function () {
+            servidorService.obtenerTemp.then(function successCallback(response) {
+                switch (response.data.code) {
+                    case 200:
+                        $scope.tablaTem = response.data.datos;
+                        break;
+                    case 500:
+                        $scope.tablaTem = {};
+                }
+            });
+        };
+
+        $scope.pintarTabla();
     }]);

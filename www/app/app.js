@@ -3,5 +3,6 @@ angular.module('CamaraTermicaApp', [
     'ngRoute',
     'ngResource',
     'ngStorage',
-    'ngRoute.middleware'
+    'ngRoute.middleware',
+    'chart.js'
 ]);

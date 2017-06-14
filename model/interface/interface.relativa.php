@@ -6,9 +6,9 @@ interface IRelativas {
 
   public function selectById($id);
 
-  public function insert(variables $variables);
+  public function insert(relativas $rel);
 
-  public function update(variables $variables);
+  public function update(relativas $rel);
 
   public function delete($id);
   

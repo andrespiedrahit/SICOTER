@@ -6,9 +6,9 @@ interface ITemperatura {
 
   public function selectById($id);
 
-  public function insert(variables $variables);
+  public function insert(temperatura $tem);
 
-  public function update(variables $variables);
+  public function update(temperatura $tem);
 
   public function delete($id);
   

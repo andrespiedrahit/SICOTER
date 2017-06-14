@@ -38,30 +38,33 @@
             <div class="panel principal">
                 <div class="panel-heading">
                     <div class="row">
-                        <form ng-submit="submit()">
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="panel panel-green">
-                                    <div class="panel-footer" style="border: solid 1px #238276">
-                                        <center style="background: orange;height: 90px; padding-top: 10px"><h4 class="tituloFecha">FECHA DE INICIO</h4>
-                                            <input type="date" name="fecha" size="12" required>
-                                        </center>
-                                    </div>
+                        <!--<form ng-submit="submit()">-->
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="panel panel-green">
+                                <div class="panel-footer" style="border: solid 1px #238276">
+                                    <center style="background: orange;height: 90px; padding-top: 10px"><h4 class="tituloFecha">FECHA DE INICIO</h4>
+                                        <input ng-model="fechaInicio" type="date" name="fecha" size="12" required>
+                                    </center>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="panel panel-green">
-                                    <div class="panel-footer" style="border: solid 1px #238276;">
-                                        <center style="background: orange; height: 90px; padding-top: 10px"><h4>FECHA DE FINALIZACION</h4>
-                                            <input type="date" name="fecha" size="12" required>
-                                        </center>
-                                    </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="panel panel-green">
+                                <div class="panel-footer" style="border: solid 1px #238276;">
+                                    <center style="background: orange; height: 90px; padding-top: 10px"><h4>FECHA DE FINALIZACION</h4>
+                                        <input ng-model="fechaFin" type="date" name="fecha" size="12" required>
+                                    </center>
                                 </div>
                             </div>
-                            <center><button type="submit" class="btn btn-primary boton">Consultar</button></center>
-                        </form>
+                        </div>
+                        <center><button type="submit" class="btn btn-primary boton">Consultar</button></center>
+                        <!--</form>-->
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container container-fluid" style="margin-top: 50px;">
+        <canvas class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options"></canvas>
     </div>
 </div>

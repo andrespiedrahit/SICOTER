@@ -102,61 +102,28 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <td>
-                            Valor variable
+                         <td>
+                            id
                         </td>
                         <td>
-                            Cº
+                            Nombre de variable
                         </td>
                         <td>
-                            Fecha y hora
+                            Fecha y Hora
+                        </td>
+                        <td>
+                            ºC
                         </td>
                     </tr>
                 </thead>
-                <tr>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                    <td>
-                        hola
-                    </td>
-                </tr>
+                <tbody>
+                    <tr ng-repeat="x in tablaHR">
+                        <td>{{x.rel_id}}</td>
+                        <td>{{x.rel_nombre}}</td>
+                        <td>{{x.rel_fecha}}</td>
+                        <td>{{x.rel_valor}}</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>

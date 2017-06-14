@@ -6,9 +6,9 @@ interface ISuelo {
 
   public function selectById($id);
 
-  public function insert(variables $variables);
+  public function insert(suelo $suelo);
 
-  public function update(variables $variables);
+  public function update(suelo $suelo);
 
   public function delete($id);
   
